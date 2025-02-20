@@ -50,7 +50,7 @@ export function OrdersTable() {
     );
 
     const matchesFilters = Object.entries(filters).every(([key, value]) =>
-      value === "All" ? true : (order as any)[key] === value
+      value === "All" ? true : order[key as keyof Order] === value
     );
 
     return matchesSearch && matchesFilters;

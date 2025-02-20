@@ -3,14 +3,16 @@
 import { FilterChip } from "../Filter";
 import { dealerships, serviceTypes, modeOfOrders, statuses } from "./data";
 
+export interface Filters {
+  dealership: string;
+  serviceType: string;
+  modeOfOrder: string;
+  status: string;
+}
+
 interface FilterBarProps {
-  filters: {
-    dealership: string;
-    serviceType: string;
-    modeOfOrder: string;
-    status: string;
-  };
-  onFilterChange: (filters: any) => void;
+  filters: Filters;
+  onFilterChange: (filters: Filters) => void;
 }
 
 export function FilterBar({ filters, onFilterChange }: FilterBarProps) {
