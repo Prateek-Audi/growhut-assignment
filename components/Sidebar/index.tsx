@@ -22,7 +22,7 @@ const settingsItems = [
 
 export function Sidebar() {
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-64 bg-white border-r border-gray-200">
+    <aside className="fixed left-0 top-0 z-40 h-screen w-64 bg-white border-r border-gray-200 pt-20">
       <div className="h-full px-3 py-4 flex flex-col">
         <div className="space-y-2">
           {menuItems.map((item) => (
@@ -45,12 +45,14 @@ export function Sidebar() {
                   height={20}
                 />
               </span>
-              <span className="ml-3">{item.label}</span>
+              <span className="text-sm font-normal text-[#727272] ml-3">
+                {item.label}
+              </span>
             </Link>
           ))}
         </div>
         <div className="mt-8">
-          <h3 className="px-2 text-sm font-medium text-gray-500">
+          <h3 className="px-2 text-xs font-medium text-[#727272]">
             Inventory Management
           </h3>
           <div className="mt-2 space-y-2">
@@ -76,13 +78,15 @@ export function Sidebar() {
                     height={20}
                   />
                 </span>
-                <span className="ml-3">{item.label}</span>
+                <span className="ml-3 text-sm font-normal text-[#727272]">
+                  {item.label}
+                </span>
               </Link>
             ))}
           </div>
         </div>
         <div className="mt-8">
-          <h3 className="px-2 text-sm font-medium text-gray-500">Settings</h3>
+          <h3 className="px-2 text-xs font-medium text-[#727272]">Settings</h3>
           <div className="mt-2 space-y-2">
             {settingsItems.map((item) => (
               <Link
@@ -106,7 +110,9 @@ export function Sidebar() {
                     height={20}
                   />
                 </span>
-                <span className="ml-3">{item.label}</span>
+                <span className="ml-3 text-sm font-normal text-[#727272]">
+                  {item.label}
+                </span>
               </Link>
             ))}
           </div>

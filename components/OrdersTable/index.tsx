@@ -57,8 +57,8 @@ export function OrdersTable() {
   });
 
   return (
-    <div className="space-y-4">
-      <div className="flex justify-between items-center gap-8">
+    <div className="space-y-4 rounded-lg bg-white py-4">
+      <div className="flex justify-between items-center gap-8 px-4">
         <FilterBar filters={filters} onFilterChange={setFilters} />
         <TableActions search={search} onSearchChange={setSearch} />
       </div>
@@ -66,7 +66,7 @@ export function OrdersTable() {
       <Table
         aria-label="Orders table"
         classNames={{
-          wrapper: "min-h-[400px]",
+          wrapper: "min-h-[400px] border-none shadow-none rounded-lg",base:"bg-white rounded-lg"
         }}
       >
         <TableHeader>
@@ -81,9 +81,9 @@ export function OrdersTable() {
         </TableHeader>
         <TableBody>
           {filteredData.map((row, index) => (
-            <TableRow key={index} className="border-b border-[#D9EFD9]">
+            <TableRow key={index} className="border-b border-[#FAFAFA]">
               {columns.map((column) => (
-                <TableCell key={column.key} className="text-sm text-[#6F6F6F]">
+                <TableCell key={column.key} className="py-5 text-sm font-normal text-black">
                   {column.key === "status" ? (
                     <span
                       className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${

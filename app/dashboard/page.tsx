@@ -7,5 +7,10 @@ export const metadata: Metadata = {
 };
 
 export default function DashboardPage() {
-  return <OrdersTable />;
+  return (
+    <div className="flex flex-col gap-4">
+      <span className="text-2xl font-medium text-[#151515]">All Order</span>
+      <OrdersTable />
+    </div>
+  );
 }
